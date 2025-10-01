@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英语听力精听</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>英语听力精听</h1>
+        <p>请上传您的音频文件，开始精听练习。</p>
+
+        <div class="uploader">
+            <input type="file" id="audio-file" accept="audio/*">
+            <label for="audio-file">选择音频文件</label>
+        </div>
+
+        <div id="player-container" class="hidden">
+            <audio id="audio-player" controls></audio>
+            <div class="controls">
+                <button id="mark-start">标记开始</button>
+                <button id="mark-end">标记结束</button>
+            </div>
+            <div id="current-marker">
+                当前标记: <span id="start-time-display">0.00</span>s
+            </div>
+        </div>
+
+        <h2>标记列表</h2>
+        <ul id="markers-list">
+            <!-- 标记的区间会在这里显示 -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
